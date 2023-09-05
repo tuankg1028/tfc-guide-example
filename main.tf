@@ -6,9 +6,13 @@ terraform {
     aws = {
       source = "hashicorp/aws"
       version = "5.15.0"
-      region = var.region
+      
     }
   }
+}
+
+provider "aws" {
+  region = var.region
 }
 
 data "aws_ami" "ubuntu" {
